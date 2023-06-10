@@ -4,10 +4,148 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "source-sans-pro", sans-serif
+  font-family: "source-sans-pro", sans-serif;
 }
 
-.App {
+#mekong-tour {
   max-width: 1920px;
   margin: 0 auto;
+  display: flex;
+}
+
+/* tour socials */
+
+.tour__socials {
+  width: 50%;
+  position: relative;
+}
+
+.img__wrapper {
+  position: absolute;
+  top: -103.52520751953125px;
+  left: 35px;
+}
+
+.window__info {
+  position: absolute;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: -8px 14px 27px #00000029;
+  border-radius: 12px;
+  opacity: 1;
+  width: 289px;
+  height: 141px;
+  top: 68px;
+  left: 727px;
+  padding: 8px 0 17px 21px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+
+.window__info--para {
+  font-size: 38px;
+  font-weight: bold;
+  color: #0d9206;
+  letter-spacing: 0;
+  line-height: 54px;
+}
+
+.window__divider {
+  width: 170px;
+  height: 0px;
+  border: 2px solid #ff8800;
+}
+
+.window__info--price {
+  font-size: 32px;
+  letter-spacing: 0;
+  line-height: 40px;
+}
+
+.social__list {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 247px;
+  left: 35px;
+}
+
+.social__link {
+  position: relative;
+  height: 60px;
+  width: 60px;
+  border-radius: 100%;
+  margin-bottom: 30px;
+  border: 1px solid #0d9206;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 200ms;
+}
+
+.social__link:hover {
+  width: 238px;
+  height: 60px;
+  background: #789376 0% 0% no-repeat padding-box;
+  box-shadow: 5px 14px 15px #0000002e;
+  border-radius: 96px;
+  opacity: 1;
+  border: none;
+  text-decoration: none;
+  
+}
+
+.social__link::after {
+  content: "Lorem Ipsum";
+  display: none;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  text-transform: capitalize;
+  font-size: 26px;
+  margin-left: 25px;
+}
+
+.social__link:hover::after {
+  display: block;
+}
+
+.social__link:hover > .fa-facebook-f {
+  color: white;
+}
+
+.social__link:hover > .fa-twitter {
+  color: white;
+}
+
+.fa-facebook-f {
+  width: 17px;
+  height: 32px;
+  color: #000000;
+}
+
+.fa-twitter {
+  width: 31px;
+  height: 25px;
+  color: #000000;
+}
+
+.more-trips {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 813px;
+  left: 35px;
+}
+
+.more-trips__wrapper {
+  margin-right: 27px;
+}
+
+.more-tips__para {
+  font-size: 26px;
+  color: #789376;
+  letter-spacing: 0;
+  line-height: 33px;
 }
