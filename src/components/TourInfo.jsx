@@ -17,14 +17,29 @@ function TourInfo() {
     slidesToShow: 2.5,
     slidesToScroll: 1,
     infinite: false,
-    
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 420,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   };
 
   return (
     <div className="tour__info">
       <div className="tour__info--text">
-        <h1 className="tour__info--heading">Mekong Delta Tour,</h1>
-        <span className="green">Vietnam</span>
+        <h1 className="tour__info--heading">Mekong Delta Tour,<span className="green">Vietnam</span></h1>
+        
         <div className="divider__vertical"></div>
         <div className="grid">
           <img src={grid} alt="" />
@@ -36,17 +51,17 @@ function TourInfo() {
         </h2>
         <button className="tour__info--btn">Book Now</button>
       </div>
+      
 
-      <button className="slider__btn--text" onClick={sliderRef?.slickNext}>
-            See more photos
-          </button>
-          <button className="slider__btn--arrow" onClick={sliderRef?.slickNext}>
-            <FontAwesomeIcon icon={faArrowRight} />
-          </button>
       <div className="slider__content">
-        
-          
-        
+        <div className="control__buttons">
+        <button className="slider__btn--text" onClick={sliderRef?.slickNext}>
+          See more photos
+        </button>
+        <button className="slider__btn--arrow" onClick={sliderRef?.slickNext}>
+          <FontAwesomeIcon icon={faArrowRight} />
+        </button>
+      </div>
         <Slider ref={setSliderRef} {...sliderSettings}>
           <div>
             <img className="slide" src={carouselImg1} alt="" />
@@ -76,7 +91,6 @@ function TourInfo() {
             <img className="slide" src={carouselImg3} alt="" />
           </div>
         </Slider>
-
       </div>
     </div>
   );

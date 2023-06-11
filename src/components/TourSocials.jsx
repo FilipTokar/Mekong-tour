@@ -10,7 +10,7 @@ function TourSocials() {
   return (
     <div className="tour__socials">
         <figure className="img__wrapper">
-          <img src={mainIMg} />
+          <img className='tour__socials--img' src={mainIMg} />
         </figure>
 
         <div className="window__info">
