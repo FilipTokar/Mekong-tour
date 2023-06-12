@@ -45,8 +45,8 @@ button {
   animation: slideInFromLeft 1s ease-in;;
 }
 
-.img__wrapper {
-  object-fit: contain;
+.tour__socials--img {
+  max-width: 100%;
 }
 
 .window__info {
@@ -367,34 +367,27 @@ button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  
   }
 
   .tour__info--heading {
     max-width: none;
     margin: 0;
-    font-size: 60px;
+    font-size: 48px;
+    text-align: center;
+  }
+
+  .tour__info--subheading {
+    font-size: 20px;
     text-align: center;
   }
 
   .green {
-    font-size: 60px;
+    font-size: 48px;
     margin: 0;
   }
 
-  .tour__socials--img {
-    object-fit: contain;
-    width: 400px;
-  }
-
-  .divider__vertical {
-    bottom: 0;
-    left: 50%;
-    height: 0;
-    width: 200px;
-    transform: translateX(-50%);
-  }
-
-  .grid,  .slider__btn--text{
+  .grid,  .slider__btn--text, .divider__vertical{
     display: none;
   }
 
@@ -413,4 +406,35 @@ button {
   }
   
 
+}
+
+/* TABLET RESPONSIVE*/
+@media (max-width:768px) {
+  #mekong-tour {
+  flex-direction: column-reverse
+}
+
+.tour__info, .tour__socials{
+  width: 100%;
+  padding: 0 24px;
+}
+
+.tour__info--text {
+  margin: 0;
+}
+
+.tour__info--heading {
+  margin-top: 64px;
+}
+
+.tour__info--subheading {
+  max-width: 85%;
+}
+.window__info {
+  top: 130px;
+  right: 24px;
+}
+.more-trips {
+  position: unset;
+}
 }
